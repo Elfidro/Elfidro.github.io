@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+    <h1 id="life-builder-heading">Life Builder</h1>
+
+    <div id="settings">
+        <h2>Settings</h2>
+        <div id="dark-mode-toggle">
+            <label for="dark-mode-checkbox">Dark Mode</label>
+            <input type="checkbox" id="dark-mode-checkbox">
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="stats">
+            <h2>Stats</h2>
+            <p>Money: <span id="money">400</span></p>
+            <p>Intelligence: <span id="intelligence">50</span></p>
+            <p>Charisma: <span id="charisma">50</span></p>
+            <p>Fitness: <span id="fitness">50</span></p>
+        </div>
+
+        <div id="actions">
+            <div class="progress-bar">
+                <div id="work-progress" class="progress"></div>
+                <button id="work-button">Work</button>
+            </div>
+
+            <div class="progress-bar">
+                <div id="study-progress" class="progress"></div>
+                <button id="study-button">Study</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add a button element for buying the shabby tent -->
+    <button id="buy-tent-button" disabled>Buy Shabby Tent</button>
+
+    <script src="script.js"></script>
+    <!-- Include the purchaseables.js file -->
+    <script src="purchaseables.js"></script>
+    <!-- Include the options.js file -->
+    <script src="options.js"></script>
+</body>
+
+</html>
