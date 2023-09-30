@@ -1,0 +1,10 @@
+1. Reincarnate window
+- When reaching the end of your lifespan, a window pops up telling you that you can reincarnate which lets you start over from
+  the beginning but with improved bonus to your skills
+
+2. Start out homeless with option to buy better accomodation
+- Buying a shabby tent
+- Buying a tent
+- Renting a room
+- Renting an apartment
+- Buying a house
