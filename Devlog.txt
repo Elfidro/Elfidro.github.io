@@ -9,10 +9,11 @@
 - Name at top of screen
 - Dark mode default
 09/29/2023
-- Added options.js and purchaseables.js
+- Added options and purchaseables
 - Added option to buy a shabby tent
 - Added reincarnation (disabled for now due to working on other functions)
 - Worked on progress bar
-
-TODO:
-- Fix progress bar
+09/30/2023
+- Fixed progress bar
+10/01/2023
+- Added different tabs to hold jobs, skills, etc.

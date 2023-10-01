@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Builder</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="dark-theme">
+    <h1 id="life-builder-heading">Life Builder</h1>
+
+    <div class="tab-container">
+        <button class="tab-button" onclick="openTab('jobs')">Jobs</button>
+        <button class="tab-button" onclick="openTab('skills')">Skills</button>
+        <button class="tab-button" onclick="openTab('shop')">Shop</button>
+        <button class="tab-button" onclick="openTab('investments')">Investments</button>
+        <button class="tab-button" onclick="openTab('business')">Business</button>
+        <button class="tab-button" onclick="openTab('settings')">Settings</button>
+        <!-- Add more buttons for additional tabs if needed -->
+        <!-- Jobs -->
+        <div id="Jobs" class="tab-content">
+            <div id="actions">
+                <div class="progress-bar">
+                    <div id="work-progress" class="progress"></div>
+                </div>
+                <button id="work-button">Work</button>
+
+
+                <div class="progress-bar">
+                    <div id="study-progress" class="progress"></div>
+                    <button id="study-button">Study</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jobs -->
+        <div id="jobs" class="tab-content">
+            <div id="actions">
+                <div class="progress-bar">
+                    <div id="work-progress" class="progress"></div>
+                </div>
+                <button id="work-button">Work</button>
+
+
+                <div class="progress-bar">
+                    <div id="study-progress" class="progress"></div>
+                    <button id="study-button">Study</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop -->
+        <div id="shop" class="tab-content">
+            <button id="buy-tent-button" disabled>Buy Shabby Tent</button>
+        </div>
+
+        <!-- Settings -->
+        <div id="settings" class="tab-content">
+            <div id="settings">
+                <h2>Settings</h2>
+                <div id="dark-mode-toggle">
+                    <label for="dark-mode-checkbox">Dark Mode</label>
+                    <input type="checkbox" id="dark-mode-checkbox">
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more content sections for additional tabs if needed -->
+    </div>
+
+
+    <div id="main-content">
+        <!--
+        <div class="panel w3-margin-left" style="width: 900px; height: 40px; float: left">
+            <div class="w3-button w3-bar-item tabButton" id="jobTabButton" onclick="setTab(this, 'jobs')"></div>
+        </div>
+        -->
+
+        <div id="stats">
+            <h2>Stats</h2>
+            <p>Money: <span id="money">400</span></p>
+            <p>Intelligence: <span id="intelligence">0</span></p>
+            <p>Charisma: <span id="charisma">0</span></p>
+            <p>Fitness: <span id="fitness">0</span></p>
+        </div>
+    </div>
+
+    <script src="tabs.js"></script>
+    <script src="actions.js"></script>
+    <script src="purchaseables.js"></script>
+    <script src="options.js"></script>
+</body>
+
+</html>

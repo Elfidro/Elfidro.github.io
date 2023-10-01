@@ -7,13 +7,32 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.tab-container {
+    display: flex;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 #character, #stats {
     margin-bottom: 20px;
 }
 
 .progress-bar {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .progress {
@@ -28,6 +47,7 @@ body {
     color: white;
     border: 1px solid #f00; /* Add border to progress bar */
     border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    transition: width 0.3s ease; /* Adds a smooth transition effect to the progress bar's width changes. */
 }
 
 button {

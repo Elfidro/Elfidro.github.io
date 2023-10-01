@@ -1,4 +1,4 @@
-let money = 400; // Initial amount of money
+//let money = 400; // Initial amount of money
 
 
 //function test() {
