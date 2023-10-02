@@ -17,3 +17,57 @@
 - Fixed progress bar
 10/01/2023
 - Added different tabs to hold jobs, skills, etc.
+10/02/2023
+- Removed Study action
+- Removed all stats besides Money
+- Added different containers for stats and tabs
+- Made the containers change background color based on dark mode
+- Different color palette
+
+
+Ideas:
+Character Creation:
+
+Choose gender, appearance, and starting attributes (e.g., intelligence, charisma, fitness).
+Career Path:
+
+Start with entry-level job.
+Incrementally progress through promotions, skill-building, and education.
+Choose between different career tracks (e.g., business, technology, arts).
+Education:
+
+Invest in education for skill upgrades and better job opportunities.
+Attend courses, workshops, and seminars.
+Finance Management:
+
+Earn money through work.
+Allocate earnings for expenses (e.g., rent, food, entertainment) and savings (e.g., investments, retirement fund).
+Relationships:
+
+Socialize and build relationships with NPCs (non-player characters) and AI-driven characters.
+Choose between friendships, romantic relationships, and family interactions.
+Hobbies and Interests:
+
+Pursue hobbies (e.g., painting, gaming, cooking) for personal fulfillment and skill improvement.
+Health and Wellness:
+
+Manage physical and mental health through activities like exercise, meditation, and healthcare appointments.
+Events and Milestones:
+
+Encounter various life events (e.g., promotions, birthdays, vacations) that impact your character's story.
+Time Management:
+
+Allocate time for different activities (e.g., work, socializing, self-improvement) to optimize progress.
+Skill Tree:
+
+Unlock and upgrade skills relevant to your character's chosen path (e.g., negotiation skills for business professionals, coding skills for tech careers).
+Aging and Life Stages:
+
+Progress through stages of life, each with unique challenges and opportunities (e.g., adolescence, adulthood, retirement).
+Achievements and Challenges:
+
+Complete objectives to earn rewards and unlock special features.
+Customization and Upgrades:
+
+Customize your character's living space, wardrobe, and accessories.
+Upgrade items for better performance and aesthetics.

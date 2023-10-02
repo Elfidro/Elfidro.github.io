@@ -1,14 +1,29 @@
 ﻿body.dark-theme {
-    background-color: #333;
-    color: #fff;
+    background-color: #333;    /* Dark gray color */
+    color: #fff;               /* White color */
 }
 
 body {
+    background-color: #fff;    /* White color */
     font-family: Arial, sans-serif;
 }
 
+.container {
+    background-color: #444444;
+    margin: 10px;
+}
+
+.main-container {
+    float: left;
+    width: 70%;
+    padding: 20px;
+    /*background-color: #4423eb;*/
+}
+
 .tab-container {
-    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #444444;
 }
 
 .tab-button {
@@ -56,10 +71,10 @@ button {
     cursor: pointer;
 }
 
-    /* Add this new rule to position buttons below the progress bar */
-    button[id^="work-button"], button[id^="study-button"] {
-        margin-top: 35px; /* Adjust this value to control the spacing */
-    }
+/* Add this new rule to position buttons below the progress bar */
+button[id^="work-button"], button[id^="study-button"] {
+    margin-top: 35px; /* Adjust this value to control the spacing */
+}    
 
 #dark-mode-toggle {
     margin-top: 20px;

@@ -12,12 +12,12 @@ function toggleWork() {
     } else {
         workInterval = setInterval(function () {
             // Increment work by 1
-            workProgress += 1;
+            workProgress += 10;
             // Increase progress bar by %
             document.getElementById('work-progress').style.width = workProgress + '%';
 
             // Checks if bar is full, if true then execute code
-            if (workProgress >= 20) {
+            if (workProgress >= 100) {
                 workProgress = 0;                                               // Reset progress bar to 0%
                 money = parseInt(document.getElementById('money').innerText);   // Retrieve html element 'money' for use in javascript
                 money += 10;                                                    // Increment money by 10
