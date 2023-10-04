@@ -2,7 +2,6 @@
 /* Toggles dark theme */
 document.getElementById('dark-mode-checkbox').addEventListener('change', function () {
     document.body.classList.toggle('dark');
-    //toggleBackgrounds();
 });
 
 //let isLightGray = false; // Flag to keep track of the current background color
