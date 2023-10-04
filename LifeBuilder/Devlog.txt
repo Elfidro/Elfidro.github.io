@@ -23,6 +23,13 @@
 - Added different containers for stats and tabs
 - Made the containers change background color based on dark mode
 - Different color palette
+10/03/2023
+- New container for currently selected tab
+- Jobs tab is open by default
+- Removed Work button replaced by clicking on the progress bar
+10/04/2023
+- Better dark mode function
+- Tables!
 
 
 Ideas:

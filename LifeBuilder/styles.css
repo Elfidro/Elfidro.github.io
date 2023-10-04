@@ -1,36 +1,26 @@
-﻿body.dark-theme {
-    background-color: #333;    /* Dark gray color */
-    color: #fff;               /* White color */
-}
-
-body {
+﻿body {
     background-color: #fff;    /* White color */
     font-family: Arial, sans-serif;
 }
 
-.container {
-    background-color: #444444;
-    margin: 10px;
+.panel {
+    background-color: #e0e0e0;
 }
 
-.main-container {
-    float: left;
-    width: 70%;
-    padding: 20px;
-    /*background-color: #4423eb;*/
+.container {
+    margin: 10px;
 }
 
 .tab-container {
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: #444444;
 }
 
-.tab-button {
+.button {
+    background-color: #e0e0e0;
     padding: 10px 20px;
     cursor: pointer;
     border: none;
-    background-color: #ddd;
 }
 
 .tab-content {
@@ -47,7 +37,11 @@ body {
 
 .progress-bar {
     position: relative;
+    background-color: #ff0000;
+    height: 30px;
+    width: auto;
     margin-bottom: 0px;
+    cursor: pointer;
 }
 
 .progress {
@@ -60,21 +54,19 @@ body {
     text-align: center;
     line-height: 30px;
     color: white;
-    border: 1px solid #f00; /* Add border to progress bar */
-    border-radius: 5px; /* Optional: Add border radius for rounded corners */
-    transition: width 0.3s ease; /* Adds a smooth transition effect to the progress bar's width changes. */
+    /*border: 1px solid #000000;*/ /* Add border to progress bar */
+    /*border-radius: 5px;*/ /* Optional: Add border radius for rounded corners */
+    transition: width 0.15s ease; /* Adds a smooth transition effect to the progress bar's width changes. */
 }
 
-button {
-    height: 30px;
-    margin-top: 5px;
-    cursor: pointer;
+#progress-text {
+    position: relative;
+    top: 6px;
+    left: 5px;
+    /*transform: translate(-50%, -50%);*/
+    font-size: 16px;
+    color: white;
 }
-
-/* Add this new rule to position buttons below the progress bar */
-button[id^="work-button"], button[id^="study-button"] {
-    margin-top: 35px; /* Adjust this value to control the spacing */
-}    
 
 #dark-mode-toggle {
     margin-top: 20px;

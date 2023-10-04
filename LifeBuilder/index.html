@@ -6,47 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Builder</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark.css">
 
 </head>
 
-<body class="dark-theme">
+<body id="body" class="dark">
     <h1 id="life-builder-heading">Life Builder</h1>
 
-    
-
-    <div class="main-container">
+    <!--  background-color: #4423eb; -->
+    <div style=" float: left; width: 1200px; padding: 20px;">
 
         <!-- Stats -->
-        <div class="container" style="float: left; width: 250px; height: auto;">
+        <div class="panel container" style="float: left; width: 250px; height: auto;">
             <h2>Stats</h2>
             <p>Money: <span id="money">400</span></p>
         </div>
 
         <!-- Tabs -->
-        <div class="tab-container" style="float: left; width: auto; height: auto;">
-            <button class="tab-button" onclick="openTab('jobs')">Jobs</button>
-            <button class="tab-button" onclick="openTab('skills')">Skills</button>
-            <button class="tab-button" onclick="openTab('shop')">Shop</button>
-            <button class="tab-button" onclick="openTab('investments')">Investments</button>
-            <button class="tab-button" onclick="openTab('business')">Business</button>
-            <button class="tab-button" onclick="openTab('settings')">Settings</button>
+        <div class="panel tab-container" style="float: left; width: 800px; height: auto;">
+            <button class="button" onclick="openTab('jobs')">Jobs</button>
+            <button class="button" onclick="openTab('skills')">Skills</button>
+            <button class="button" onclick="openTab('shop')">Shop</button>
+            <button class="button" onclick="openTab('investments')">Investments</button>
+            <button class="button" onclick="openTab('business')">Business</button>
+            <button class="button" onclick="openTab('settings')" style="float: right">Settings</button>
             <!-- Add more buttons for additional tabs if needed -->
+        </div>
+
+        <!-- Selected Tab -->
+        <div class="panel" style="float: left; width: 800px; height: auto;">
+
             <!-- Jobs -->
-            <div id="jobs" class="tab-content">
-
+            <div id="jobs" class="tab-content active">
+                <h2>Jobs</h2>
+                <table>
+                    <tr>
+                        <th>Job</th>
+                        <th>Level</th>
+                        <th>Income/hour</th>
+                        <th>Xp Left</th>
+                        <th>Xp/hour</th>
+                        <th>Memory</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="progress-bar">
+                                <div id="work-progress" class="progress"></div>
+                                <span id="progress-text"> Beggar </span>
+                            </div>
+                        </td>
+                        <td class="level">0</td>
+                        <td class="income">0</td>
+                        <td class="xpleft">0</td>
+                        <td class="xphour">0</td>
+                        <td class="memory">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="progress-bar">
+                                <div id="work-progress" class="progress"></div>
+                                <span id="progress-text"> Recycler </span>
+                            </div>
+                        </td>
+                        <td class="level">0</td>
+                        <td class="income">0</td>
+                        <td class="xpleft">0</td>
+                        <td class="xphour">0</td>
+                        <td class="memory">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="progress-bar">
+                                <div id="work-progress" class="progress"></div>
+                                <span id="progress-text"> Street Performer </span>
+                            </div>
+                        </td>
+                        <td class="level">0</td>
+                        <td class="income">0</td>
+                        <td class="xpleft">0</td>
+                        <td class="xphour">0</td>
+                        <td class="memory">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="progress-bar">
+                                <div id="work-progress" class="progress"></div>
+                                <span id="progress-text"> Odd Jobs Worker </span>
+                            </div>
+                        </td>
+                        <td class="level">0</td>
+                        <td class="income">0</td>
+                        <td class="xpleft">0</td>
+                        <td class="xphour">0</td>
+                        <td class="memory">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="progress-bar">
+                                <div id="work-progress" class="progress"></div>
+                                <span id="progress-text"> Day Labourer </span>
+                            </div>
+                        </td>
+                        <td class="level">0</td>
+                        <td class="income">0</td>
+                        <td class="xpleft">0</td>
+                        <td class="xphour">0</td>
+                        <td class="memory">0</td>
+                    </tr>
+                    <!-- Add more rows for additional jobs if needed -->
+                </table>
                 <!-- Beggar -->
-                <div id="actions">
-                    <div class="progress-bar">
-                        <div id="work-progress" class="progress"></div>
-                    </div>
-                    <button id="work-button">Work</button>
-                </div>
 
+
+
+            </div>
+
+            <!-- Skills -->
+            <div id="skills" class="tab-content">
+                <p>skills placeholder</p>
             </div>
 
             <!-- Shop -->
             <div id="shop" class="tab-content">
                 <button id="buy-tent-button" disabled>Buy Shabby Tent</button>
+            </div>
+
+            <!-- Investments -->
+            <div id="investments" class="tab-content">
+                <p>investments placeholder</p>
+            </div>
+
+            <!-- Business -->
+            <div id="business" class="tab-content">
+                <p>business placeholder</p>
             </div>
 
             <!-- Settings -->
@@ -62,6 +154,7 @@
 
             <!-- Add more content sections for additional tabs if needed -->
         </div>
+
     </div>
 
     <script src="actions.js"></script>
