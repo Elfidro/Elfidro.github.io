@@ -17,7 +17,8 @@
     <div style=" float: left; width: 1200px; padding: 20px;">
 
         <!-- Stats -->
-        <div class="panel container" style="float: left; width: 250px; height: auto;">
+        <div class="panel container" style="float: left; width: 250px; height: auto;"
+            <button id="pause-button" onclick="pause()"> Pause </button>
             <h2>Stats</h2>
             <p>Money: <span id="money">400</span></p>
         </div>
@@ -41,30 +42,32 @@
                 <h2>Jobs</h2>
                 <table>
                     <tr>
-                        <th>Job</th>
-                        <th>Level</th>
-                        <th>Income/hour</th>
-                        <th>Xp Left</th>
-                        <th>Xp/hour</th>
-                        <th>Memory</th>
+                        <th style="width: 200px">Job</th>
+                        <th style="width: 100px">Level</th>
+                        <th style="width: 100px">Income/hour</th>
+                        <th style="width: 100px">Xp Left</th>
+                        <th style="width: 100px">Xp/hour</th>
+                        <th style="width: 100px">Memory</th>
                     </tr>
-                    <tr>
+                    <!-- Beggar -->
+                    <tr id="row Beggar">
                         <td>
-                            <div class="progress-bar">
-                                <div id="work-progress" class="progress"></div>
+                            <div class="progress-bar" data-job="beggar">
+                                <div id="beggar-progress" class="progress"></div>
                                 <span id="progress-text"> Beggar </span>
                             </div>
                         </td>
                         <td class="level">0</td>
-                        <td class="income">0</td>
+                        <td class="income">10</td>
                         <td class="xpleft">0</td>
                         <td class="xphour">0</td>
                         <td class="memory">0</td>
                     </tr>
-                    <tr>
+                    <!-- Recycler-->
+                    <tr id="row Recycler" class="hidden">
                         <td>
-                            <div class="progress-bar">
-                                <div id="work-progress" class="progress"></div>
+                            <div class="progress-bar" data-job="recycler">
+                                <div id="recycler-progress" class="progress"></div>
                                 <span id="progress-text"> Recycler </span>
                             </div>
                         </td>
@@ -74,10 +77,11 @@
                         <td class="xphour">0</td>
                         <td class="memory">0</td>
                     </tr>
-                    <tr>
+                    <!-- Performer -->
+                    <tr id="row Performer" class="hidden">
                         <td>
-                            <div class="progress-bar">
-                                <div id="work-progress" class="progress"></div>
+                            <div class="progress-bar" data-job="performer">
+                                <div id="performer-progress" class="progress"></div>
                                 <span id="progress-text"> Street Performer </span>
                             </div>
                         </td>
@@ -87,10 +91,11 @@
                         <td class="xphour">0</td>
                         <td class="memory">0</td>
                     </tr>
-                    <tr>
+                    <!-- Odd Jobs Worker-->
+                    <tr id="row OddJobsWorker" class="hidden">
                         <td>
-                            <div class="progress-bar">
-                                <div id="work-progress" class="progress"></div>
+                            <div class="progress-bar" data-job="oddjobsworker">
+                                <div id="oddjobsworker-progress" class="progress"></div>
                                 <span id="progress-text"> Odd Jobs Worker </span>
                             </div>
                         </td>
@@ -100,10 +105,11 @@
                         <td class="xphour">0</td>
                         <td class="memory">0</td>
                     </tr>
-                    <tr>
+                    <!-- Day Labourer -->
+                    <tr id="row Day Labourer" class="hidden">
                         <td>
-                            <div class="progress-bar">
-                                <div id="work-progress" class="progress"></div>
+                            <div class="progress-bar" data-job="daylabourer">
+                                <div id="daylabourer-progress" class="progress"></div>
                                 <span id="progress-text"> Day Labourer </span>
                             </div>
                         </td>
@@ -115,10 +121,6 @@
                     </tr>
                     <!-- Add more rows for additional jobs if needed -->
                 </table>
-                <!-- Beggar -->
-
-
-
             </div>
 
             <!-- Skills -->
@@ -145,9 +147,13 @@
             <div id="settings" class="tab-content">
                 <div id="settings">
                     <h2>Settings</h2>
-                    <div id="dark-mode-toggle">
+                    <div style="margin-top: 20px">
                         <label for="dark-mode-checkbox">Dark Mode</label>
                         <input type="checkbox" id="dark-mode-checkbox">
+                    </div>
+                    <div style="margin-top: 20px; margin-bottom: 20px">
+                        <label> Debug Mode </label>
+                        <input type="checkbox" id="debug-checkbox">
                     </div>
                 </div>
             </div>
@@ -157,8 +163,8 @@
 
     </div>
 
-    <script src="actions.js"></script>
     <script src="tabs.js"></script>
+    <script src="actions.js"></script>
     <script src="purchaseables.js"></script>
     <script src="settings.js"></script>
 </body>

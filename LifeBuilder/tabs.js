@@ -1,3 +1,7 @@
+var game = {
+    paused: false,
+}
+
 function openTab(tabId) {
     // Hide all content sections
     var contents = document.getElementsByClassName('tab-content');
@@ -19,3 +23,21 @@ function openTab(tabId) {
     //var selectedButton = document.querySelector('.tab-button[data-tab="' + tabId + '"]');
     //selectedButton.classList.add('active');
 }
+
+function pause() {
+    game.paused = !game.paused;
+    document.getElementById("pause-button").textContent = game.paused ? "Play" : "Pause"
+}
+
+//document.getElementById('pause-button').addEventListener('click', function () {
+//    pause();
+//    document.getElementById('pause-button').innerText = isWorking ? 'Play' : 'Pause';
+//});
+
+
+//<button id="work-button">Work</button>
+
+//document.getElementById('work-button').addEventListener('click', function () {
+//    toggleWork();
+//    document.getElementById('work-button').innerText = isWorking ? 'Stop Work' : 'Work';
+//});

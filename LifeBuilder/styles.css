@@ -35,6 +35,10 @@
     margin-bottom: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 .progress-bar {
     position: relative;
     background-color: #ff0000;
@@ -47,17 +51,30 @@
 .progress {
     height: 30px;
     background-color: #e0e0e0;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition: width 0.15s ease;
+}
+
+/*.progress.active {
+    height: 30px;
+    background-color: #e0e0e0;
     width: 0%;
     position: absolute;
     top: 0;
     left: 0;
     text-align: center;
     line-height: 30px;
-    color: white;
+    color: white;*/
     /*border: 1px solid #000000;*/ /* Add border to progress bar */
     /*border-radius: 5px;*/ /* Optional: Add border radius for rounded corners */
-    transition: width 0.15s ease; /* Adds a smooth transition effect to the progress bar's width changes. */
-}
+    /*transition: width 0.15s ease;*/ /* Adds a smooth transition effect to the progress bar's width changes. */
+/*}*/
 
 #progress-text {
     position: relative;
@@ -66,10 +83,6 @@
     /*transform: translate(-50%, -50%);*/
     font-size: 16px;
     color: white;
-}
-
-#dark-mode-toggle {
-    margin-top: 20px;
 }
 
 label {

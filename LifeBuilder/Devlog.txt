@@ -30,7 +30,12 @@
 10/04/2023
 - Better dark mode function
 - Tables!
-
+- New Jobs
+10/07/2023
+- Hidden jobs
+- Fixed bug with jobs progress bars
+- Added pause button
+- Debug mode
 
 Ideas:
 Character Creation:
