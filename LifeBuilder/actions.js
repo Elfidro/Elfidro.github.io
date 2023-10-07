@@ -45,7 +45,6 @@ function toggleWork(job) {
 }
 
 /* Reincarnation Code */
-
 function startReincarnationTimer() {
     setTimeout(function () {
         if (confirm("Congratulations! You can now reincarnate and start over with improved bonuses to your skills. Would you like to reincarnate?")) {

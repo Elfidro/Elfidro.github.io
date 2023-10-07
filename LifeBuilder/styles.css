@@ -73,7 +73,7 @@
     color: white;*/
     /*border: 1px solid #000000;*/ /* Add border to progress bar */
     /*border-radius: 5px;*/ /* Optional: Add border radius for rounded corners */
-    /*transition: width 0.15s ease;*/ /* Adds a smooth transition effect to the progress bar's width changes. */
+    /*transition: width 0.15s ease;*/ /* Adds a smooth transition effect to the progress bar's width changes. */ 
 /*}*/
 
 #progress-text {
