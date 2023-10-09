@@ -1,6 +1,11 @@
 let workInterval;
 let isWorking = false;
-/*let workProgress = 0;*/
+
+var gameState = {
+    money: 0,
+    level: 5,
+    // Add more data as needed
+};
 
 // Define an object to keep track of progress for each job
 let jobProgress = {
@@ -32,11 +37,10 @@ function toggleWork(job) {
 
             // Checks if bar is full, if true then execute code
             if (jobProgress[job] >= 100) {
-                jobProgress[job] = 0;                                               // Reset progress bar to 0%
-                money = parseInt(document.getElementById('money').innerText);   // Retrieve html element 'money' for use in javascript
-                money += 10;                                                    // Increment money by 10
-                checkBuyTent();                                                 // Check if user can make purchases
-                document.getElementById('money').innerText = money;             // Paste new value of 'money' to html
+                jobProgress[job] = 0;                                                     // Reset progress bar to 0%
+                gameState.money += 470;                                                    // Increment money by 10
+                checkBuyTent();                                                           // Check if user can make purchases
+                document.getElementById('money').innerText = gameState.money;             // Paste new value of 'money' to html
             }
         }, 100);
         //progress.classList.add("active");
@@ -75,4 +79,31 @@ for (let i = 0; i < progressBars.length; i++) {
         const job = this.dataset.job; // Extract the job type from data attribute
         toggleWork(job);
     });
+}
+
+// Save game state
+function saveGame() {
+    localStorage.setItem('gameState', JSON.stringify(gameState));
+    console.log("Saving");
+}
+
+// Reset game State
+function resetGame() {
+    if (confirm("Are you sure you want to reset? This action cannot be undone.")) {
+        localStorage.clear();
+        location.reload();
+    }
+}
+
+// Load game state
+function loadGame() {
+    const gameStateString = localStorage.getItem('gameState');
+
+    console.log("Loading");
+    if (gameStateString) {
+        var gameSave = JSON.parse(gameStateString)
+        console.log("Loading2");
+        document.getElementById('money').innerText = gameSave.money;
+        gameState = gameSave;
+    }
 }

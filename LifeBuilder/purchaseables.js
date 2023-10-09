@@ -15,8 +15,8 @@
 
 // Update the money display when it changes
 function updateMoneyDisplay() {
-    console.log("MoneyDisplay:", money);
-    document.getElementById('money').innerText = money;
+    console.log("MoneyDisplay:", gameState.money);
+    document.getElementById('money').innerText = gameState.money;
     checkBuyTent(); // Check if the player can buy the tent
 }
 
@@ -26,7 +26,7 @@ function checkBuyTent() {
     const tentPrice = 500; // Price of the shabby tent
 
     // If the player has enough money, enable the buy button
-    if (money >= tentPrice) {
+    if (gameState.money >= tentPrice) {
         document.getElementById('buy-tent-button').disabled = false;
     } else {
         document.getElementById('buy-tent-button').disabled = true;
@@ -38,9 +38,9 @@ function buyTent() {
     console.log("Button clicked!");
     const tentPrice = 500; // Price of the shabby tent
 
-    if (money >= tentPrice) {
+    if (gameState.money >= tentPrice) {
         console.log("Money after purchase:", money);
-        money -= tentPrice; // Deduct the cost of the tent from the player's money
+        gameState.money -= tentPrice; // Deduct the cost of the tent from the player's money
         updateMoneyDisplay(); // Update the displayed money
         alert('Congratulations! You have purchased a shabby tent.');
     }

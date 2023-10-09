@@ -36,6 +36,8 @@
 - Fixed bug with jobs progress bars
 - Added pause button
 - Debug mode
+10/09/2023
+- Saving and Loading features
 
 Ideas:
 Character Creation:

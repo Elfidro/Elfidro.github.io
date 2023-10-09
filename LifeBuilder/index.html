@@ -20,7 +20,7 @@
         <div class="panel container" style="float: left; width: 250px; height: auto;"
             <button id="pause-button" onclick="pause()"> Pause </button>
             <h2>Stats</h2>
-            <p>Money: <span id="money">400</span></p>
+            <p>Money: <span id="money">0</span></p>
         </div>
 
         <!-- Tabs -->
@@ -155,6 +155,9 @@
                         <label> Debug Mode </label>
                         <input type="checkbox" id="debug-checkbox">
                     </div>
+                    <button id="save-button" onclick="saveGame()"> Save </button>
+                    <button id="load-button" onclick="loadGame()"> Load </button>
+                    <button id="reset-button" onclick="resetGame()"> Reset </button>
                 </div>
             </div>
 
