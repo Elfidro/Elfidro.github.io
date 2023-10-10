@@ -38,6 +38,9 @@
 - Debug mode
 10/09/2023
 - Saving and Loading features
+10/10/2023
+- Fixed debug mode
+- Rows update function
 
 Ideas:
 Character Creation:
