@@ -429,16 +429,6 @@ legend + * {
   clear: left;
 }
 
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-year-field {
-  padding: 0;
-}
-
 ::-webkit-inner-spin-button {
   height: auto;
 }
@@ -448,14 +438,6 @@ legend + * {
   -webkit-appearance: textfield;
 }
 
-/* rtl:raw:
-[type="tel"],
-[type="url"],
-[type="email"],
-[type="number"] {
-  direction: ltr;
-}
-*/
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -7667,41 +7649,6 @@ textarea.form-control-lg {
   margin: auto !important;
 }
 
-.mx-0 {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
-.mx-1 {
-  margin-right: 0.25rem !important;
-  margin-left: 0.25rem !important;
-}
-
-.mx-2 {
-  margin-right: 0.5rem !important;
-  margin-left: 0.5rem !important;
-}
-
-.mx-3 {
-  margin-right: 1rem !important;
-  margin-left: 1rem !important;
-}
-
-.mx-4 {
-  margin-right: 1.5rem !important;
-  margin-left: 1.5rem !important;
-}
-
-.mx-5 {
-  margin-right: 3rem !important;
-  margin-left: 3rem !important;
-}
-
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
-
 .my-0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -7872,37 +7819,6 @@ textarea.form-control-lg {
 .p-5 {
   padding: 3rem !important;
 }
-
-.px-0 {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-.px-1 {
-  padding-right: 0.25rem !important;
-  padding-left: 0.25rem !important;
-}
-
-.px-2 {
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-}
-
-.px-3 {
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
-}
-
-.px-4 {
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
-}
-
-.px-5 {
-  padding-right: 3rem !important;
-  padding-left: 3rem !important;
-}
-
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -9785,30 +9701,6 @@ textarea.form-control-lg {
   .p-lg-5 {
     padding: 3rem !important;
   }
-  .px-lg-0 {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-  .px-lg-1 {
-    padding-right: 0.25rem !important;
-    padding-left: 0.25rem !important;
-  }
-  .px-lg-2 {
-    padding-right: 0.5rem !important;
-    padding-left: 0.5rem !important;
-  }
-  .px-lg-3 {
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
-  }
-  .px-lg-4 {
-    padding-right: 1.5rem !important;
-    padding-left: 1.5rem !important;
-  }
-  .px-lg-5 {
-    padding-right: 3rem !important;
-    padding-left: 3rem !important;
-  }
   .py-lg-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -11179,10 +11071,12 @@ body {
   border-width: 0.25rem;
   width: 3rem;
 }
-.contact-section .social {
-  margin-top: 5rem;
+
+/* Social Media */
+.social {
+  margin-left: auto;
 }
-.contact-section .social a {
+.social a {
   text-align: center;
   height: 3rem;
   width: 3rem;
@@ -11191,13 +11085,32 @@ body {
   line-height: 3rem;
   color: rgba(255, 255, 255, 0.3);
 }
-.contact-section .social a:hover {
+.social a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-.contact-section .social a:active {
+.social a:active {
   color: #fff;
+}
+.icon {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
 }
 
 .footer {
-  padding: 5rem 0;
+    /* Text */
+    --bs-text-opacity: 1;
+    color: rgba(255, 255, 255, 0.5) !important;
+    /* Background */
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+    
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    margin: 0;
+    padding-left: 1rem;
+    float: left;
 }
