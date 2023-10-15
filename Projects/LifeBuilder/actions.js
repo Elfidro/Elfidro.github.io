@@ -4,12 +4,18 @@ let isWorking = false;
 var gameState = {
     money: 0,
     jobProgress: {
-        'beggar': { progress: 0, level: 0, income: 10 },
-        'recycler': { progress: 0, level: 0, income: 20 },
-        'performer': { progress: 0, level: 0, income: 30 },
-        'oddjobsworker': { progress: 0, level: 0, income: 40 },
-        'daylabourer': { progress: 0, level: 0, income: 50 },
+        'beggar': { progress: 0, level: 9, income: 10 },
+        'recycler': { progress: 0, level: 9, income: 20},
+        'performer': { progress: 0, level: 9, income: 30, },
+        'oddjobsworker': { progress: 0, level: 9, income: 40 },
+        'daylabourer': { progress: 0, level: 9, income: 50 },
     },
+    jobDependencies: [
+        { job: 'recycler', requires: 'beggar', level: 10 },
+        { job: 'performer', requires: 'recycler', level: 10 },
+        { job: 'oddjobsworker', requires: 'performer', level: 10 },
+        { job: 'daylabourer', requires: 'oddjobsworker', level: 10 },
+    ],
     // Add more data as needed
 };
 
@@ -36,6 +42,7 @@ function toggleWork(job) {
                 gameState.money += jobData.income;                                        // Increment money by income
                 jobData.level++;
                 updateRows();
+                checkRequirements();
                 checkBuyTent();                                                           // Check if user can make purchases
                 document.getElementById('money').innerText = gameState.money;             // Paste new value of 'money' to html
             }
@@ -43,6 +50,34 @@ function toggleWork(job) {
         isWorking = true;
     }
 }
+
+//document.getElementById('debug-checkbox').addEventListener('change', function () {
+//    var jobs = Array.from(document.getElementsByClassName('hidden'));
+//    for (var i = 0; i < jobs.length; i++) {
+//        jobs[i].classList.remove('hidden');
+//    }
+//});
+
+function checkRequirements(requirement) {
+    var jobs = document.getElementsByClassName('hidden');
+    if (requirement >= 10) {
+        jobs[0].classList.remove('hidden');
+    }
+}
+
+function checkRequirements() {
+    var jobs = document.getElementsByClassName('hidden');
+    console.log("test");
+
+    gameState.jobDependencies.forEach(dependency => {
+        const { job, requires, level } = dependency;
+        if (gameState.jobProgress[requires].level >= level) {
+            const jobElement = document.getElementById(`row ${job.charAt(0).toUpperCase() + job.slice(1)}`);
+            jobElement.classList.remove('hidden');
+        }
+    });
+}
+
 
 // Iterate over the rows and update the income value
 function updateRows() {
